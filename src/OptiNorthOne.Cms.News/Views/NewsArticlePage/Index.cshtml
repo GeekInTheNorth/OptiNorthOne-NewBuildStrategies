@@ -1,0 +1,8 @@
+﻿@using EPiServer.Web.Mvc.Html
+@model OptiNorthOne.Cms.News.Article.NewsArticlePageViewModel
+
+<h1>@Html.PropertyFor(x => x.CurrentPage.Title)</h1>
+
+<div>
+    @Html.PropertyFor(x => x.CurrentPage.ArticleContent)
+</div>

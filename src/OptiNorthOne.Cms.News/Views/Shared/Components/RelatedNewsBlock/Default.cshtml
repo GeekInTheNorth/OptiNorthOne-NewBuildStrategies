@@ -1,0 +1,14 @@
+﻿@using EPiServer.Web.Mvc.Html
+@model OptiNorthOne.Cms.News.RelatedNews.RelatedNewsViewModel
+
+@if (Model.Articles != null)
+{
+    <h2>@Html.PropertyFor(x => x.Title)</h2>
+
+    @foreach (var article in Model.Articles)
+    {
+        <div>
+            <h3>@article.Title</h3>
+        </div>
+    }
+}

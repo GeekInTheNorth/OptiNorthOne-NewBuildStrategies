@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="modules\**" />
+        <EmbeddedResource Remove="modules\**" />
+        <None Remove="modules\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="$(UserProfile)\.nuget\packages\**\*.zip" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="EPiServer.CMS" Version="12.13.1" />
+        <PackageReference Include="EPiServer.Find.Cms" Version="14.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OptiNorthOne.Cms.Core\OptiNorthOne.Cms.Core.csproj" />
+    </ItemGroup>
+
+</Project>

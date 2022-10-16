@@ -6,17 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Include="EPiServer"/>
-    <Using Include="EPiServer.Core"/>
-    <Using Include="EPiServer.DataAbstraction"/>
-    <Using Include="EPiServer.DataAnnotations"/>
+    <Using Include="EPiServer" />
+    <Using Include="EPiServer.Core" />
+    <Using Include="EPiServer.DataAbstraction" />
+    <Using Include="EPiServer.DataAnnotations" />
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="EPiServer.CMS" Version="12.6.0" />
+    <PackageReference Include="EPiServer.CMS" Version="12.13.1" />
+    <PackageReference Include="EPiServer.Find.Cms" Version="14.2.1" />
   </ItemGroup>
   
   <ItemGroup>
     <EmbeddedResource Include="Resources\Translations\**\*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\OptiNorthOne.Cms.News\OptiNorthOne.Cms.News.csproj" />
   </ItemGroup>
 </Project>
